@@ -1,0 +1,225 @@
+/* Container styling for both laptop and phone sections */
+.laptopDisplay,
+.phoneDisplay,
+.ipadDisplay {
+  position: relative;            /* Establish positioning context */
+  width: 100vw;                  /* 100% of the viewport width */
+  height: 150vh;                 /* Extended height for longer background */
+  overflow: hidden;              /* Prevent overflow */
+  display: flex;                 /* Flexbox for centering content */
+  justify-content: center;       /* Center horizontally */
+  align-items: center;           /* Center vertically */
+  margin: 0;                     /* Remove default margin */
+}
+
+/* Background images (laptop and phone) */
+.laptop,
+.phonePlatform,
+.ipadPlatform {
+  width: 100vw;                  /* Full width of the viewport */
+  height: 150vh;                 /* Extended height */
+  object-fit: cover;             /* Ensure the image covers the area without distortion */
+  display: block;
+}
+
+/* Centered images */
+.laptopCenter,
+.phoneCenter,
+.ipadCenter {
+  position: absolute;            /* Positioned inside the container */
+  width: 30%;                    /* Smaller size (adjustable) */
+  height: auto;                  /* Maintain aspect ratio */
+  object-fit: contain;           /* Ensure no distortion */
+}
+
+/* Customizable Positioning */
+/* You can adjust positioning here for center images */
+
+
+.textlaptop,
+.textphone,
+.textipad {
+  position: absolute;            /* Position relative to the container */
+  width: 100%;                   /* Cover full container width */
+  top: 20%;                      /* Vertically centered */
+  left: 50%;                     /* Horizontally centered */
+  transform: translate(-50%, -50%); /* Adjust to center exactly */
+  text-align: center;            /* Center the text */
+  z-index: 2;                    /* Ensure text is above images */
+}
+
+/* Text styling */
+.titlelaptop,
+.titlephone,
+.titleipad {
+  color: rgb(0, 0, 0);                   /* Text color */
+  font-size: 3em;                /* Adjust the font size as needed */
+  font-weight: bold;             /* Make the text bold */
+  font-style: oblique;
+  font-family:sans-serif;
+}
+
+/* Container styling */
+.laptopDisplay {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Initial laptop image styling */
+.laptopCenter {
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    transition: transform 0.5s ease, filter 0.3s ease; /* Smooth transition for transform and filter */
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .laptopCenter:hover {
+    filter: brightness(1.9);        /* Slightly brighten on hover */
+    transform: scale(1.05);         /* Slight enlargement */
+  }
+  
+  /* Click effect: spin and enlarge */
+  .laptopCenter.enlarged {
+    transform: scale(1.5) rotate(360deg);  /* Enlarge and spin */
+    z-index: 3;                            /* Bring to front */
+  }
+  
+  
+  /* Specifications */
+  .specs {
+    position: absolute;
+    display: none;                /* Hidden initially */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Positioning for specifications */
+  .leftSpecs {
+    left: 10%;
+    top: 30%;
+  }
+  
+  .rightSpecs {
+    right: 10%;
+    top: 30%;
+  }
+  
+
+ /* Initial phone image styling */
+.phoneCenter {
+    position: absolute;
+    top: 32%;
+    width: 20%;
+    transition: transform 0.7s ease-in-out; /* Smooth transition */
+    cursor: pointer;
+  }
+  
+  /* Hover effect for phone */
+  .phoneCenter:hover {
+    filter: brightness(1.9);        /* Slightly brighten on hover */
+    transform: scale(1.05);         /* Slight enlargement */
+  }
+  
+  /* Click effect for phone: spin and enlarge */
+  .phoneCenter.enlarged {
+    width: 20%;                     /* Adjust the size */
+    transform: scale(1.5) rotate(360deg);  /* Scaling with spin */
+    transition: transform 0.7s ease-in-out; /* Smooth spin */
+    z-index: 3;
+  }
+  
+  /* Specifications for phone */
+  .Phonespecs {
+    position: absolute;
+    display: none;                /* Hidden initially */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Positioning for phone specifications */
+  .leftSpecs {
+    left: 10%;
+    top: 30%;
+  }
+  
+  .rightSpecs {
+    right: 10%;
+    top: 30%;
+  }
+  
+  /* Container styling for iPad */
+  .ipadDisplay {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Initial iPad image styling */
+  .ipadCenter {
+    position: absolute;
+    top: 45%;
+    width: 20%;
+    transition: transform 0.7s ease-in-out; /* Smooth transition */
+    cursor: pointer;
+  }
+  
+  /* Hover effect for iPad */
+  .ipadCenter:hover {
+    filter: brightness(1.9);        /* Slightly brighten on hover */
+    transform: scale(1.05);         /* Slight enlargement */
+  }
+  
+  /* Click effect for iPad: spin and enlarge */
+  .ipadCenter.enlarged {
+    width: 20%;                     /* Adjust the size */
+    transform: scale(1.5) rotate(360deg);  /* Scaling with spin */
+    transition: transform 0.7s ease-in-out; /* Smooth spin */
+    z-index: 3;
+  }
+  
+  /* Specifications for iPad */
+  .Ipadspecs {
+    position: absolute;
+    display: none;                /* Hidden initially */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Positioning for iPad specifications */
+  .leftSpecs {
+    left: 10%;
+    top: 30%;
+  }
+  
+  .rightSpecs {
+    right: 10%;
+    top: 30%;
+  }
